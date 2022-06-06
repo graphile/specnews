@@ -1,0 +1,86 @@
+body,
+html {
+  padding: 0;
+  margin: 0;
+  outline: 0;
+  font-family: "Roboto", -apple-system, BlinkMacSystemFont, Tahoma, sans‑serif;
+}
+.header {
+  background-color: #e10098;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+}
+.header a,
+.header a:visited {
+  color: white;
+}
+.headerText {
+  flex: 1 0 300px;
+  min-width: 300px;
+  padding: 4rem 0 4rem 4rem;
+}
+.headerLogo {
+  flex: 0 0 0;
+  min-width: 24rem;
+  min-height: 24rem;
+  background-image: url("/static/logo/SpecNews.png");
+  background-size: contain;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  margin: 4rem 4rem 4rem 4rem;
+}
+
+.headerWho {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.headerPerson {
+  display: flex;
+  align-items: center;
+  margin-right: 3rem;
+}
+.headerPersonAvatar img {
+  width: 3rem;
+  height: 3rem;
+}
+.headerPersonName {
+  padding-left: 1rem;
+}
+
+.main {
+  margin: 2rem;
+  display: flex;
+  justify-content: center;
+}
+main {
+  max-width: 800px;
+}
+
+.episode {
+  display: flex;
+}
+
+.episodeArt {
+  width: 3rem;
+  height: 3rem;
+  margin-top: 2rem;
+  background-image: url("/static/logo/SpecNews.png");
+  background-size: contain;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+.episodeMain {
+  padding-left: 2rem;
+}
+
+.episodeMeta {
+  font-family: "Source Code Pro", Menlo, Ubuntu, mono;
+  font-size: 0.8rem;
+  display: flex;
+}
+.episodeMeta > * {
+  margin-left: 1rem;
+}
