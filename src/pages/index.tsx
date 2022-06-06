@@ -39,8 +39,8 @@ const IndexPage = () => {
           </div>
           <p>
             We digest the latest GraphQL working group happenings and deliver
-            the highlights to your ears, so you can stay on top of what's
-            happening in just a few minutes every month.
+            the highlights to your ears, so you can stay up to date in just a
+            few minutes every month.
           </p>
         </div>
         <div className="headerLogo"></div>
