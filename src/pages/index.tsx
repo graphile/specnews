@@ -35,7 +35,7 @@ const IndexPage = () => {
               </div>
             </div>
             <p className="lead">
-              <strong>SpecNews</strong> digests the latest GraphQL working group
+              <strong>SpecNews</strong> digests the latest GraphQL Working Group
               happenings and delivers the highlights straight to your ears, so
               you can stay up to date in just a few minutes every month.
             </p>
