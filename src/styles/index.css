@@ -179,3 +179,23 @@ main {
 .episode h5 {
   margin: 1rem 0 1rem 0;
 }
+
+.input--hidden {
+  display: none;
+}
+
+/* From sib */
+/* <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css"> */
+/*
+#sib-container input:-ms-input-placeholder {
+  text-align: left;
+  font-family: "Helvetica", sans-serif;
+  color: #c0ccda;
+}
+
+#sib-container input::placeholder {
+  text-align: left;
+  font-family: "Helvetica", sans-serif;
+  color: #c0ccda;
+}
+*/

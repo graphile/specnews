@@ -2,6 +2,7 @@ import * as React from "react";
 import episodes from "../episodes/index";
 import { Episode } from "../components/Episode";
 import { Channel } from "../components/Channel";
+import { SignupFormLight } from "../components/SignupForm";
 import "../styles/index.css";
 import { Helmet } from "react-helmet";
 
@@ -64,6 +65,7 @@ const IndexPage = () => {
               you can stay up to date in just a few minutes every month.
             </p>
             <hr />
+            <SignupFormLight />
             {/*
             <p>Subscribe to be notified of new episodes of SpecNews:</p>
             <form className="subscribe">
