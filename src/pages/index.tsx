@@ -3,10 +3,34 @@ import episodes from "../episodes/index";
 import { Episode } from "../components/Episode";
 import { Channel } from "../components/Channel";
 import "../styles/index.css";
+import { Helmet } from "react-helmet";
 
 const IndexPage = () => {
   return (
     <div>
+      <Helmet
+        title="SpecNews: a podcast delivering the latest highlights from the GraphQL Working Group"
+        defer={false}
+      >
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/apple-touch-icon.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon-16x16.png"
+        />
+      </Helmet>
+
       <div className="header">
         <div className="headerInner">
           <div className="headerText">
