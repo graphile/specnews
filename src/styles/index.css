@@ -5,30 +5,73 @@ html {
   outline: 0;
   font-family: "Roboto", -apple-system, BlinkMacSystemFont, Tahoma, sans‑serif;
 }
+body {
+  background-color: #e1009814;
+  padding-bottom: 2rem;
+}
 .header {
   background-color: #e10098;
   color: white;
   display: flex;
-  flex-wrap: wrap;
+  justify-content: center;
+  padding: 4rem;
+}
+.header h1 {
+  margin: 0 0 1rem 0;
+}
+.headerInner {
+  max-width: 64rem;
+  display: flex;
+  justify-content: center;
+}
+.header hr {
+  margin: 1rem 0;
+  border: 0;
+  border-top: 1px solid #ffffff55;
 }
 .header a,
 .header a:visited {
   color: white;
+  text-decoration: none;
+}
+.header a:hover {
+  text-decoration: underline;
 }
 .headerText {
   flex: 1 0 300px;
   min-width: 300px;
-  padding: 4rem 0 4rem 4rem;
+}
+.headerGap {
+  width: 4rem;
+  height: 1rem;
 }
 .headerLogo {
   flex: 0 0 0;
   min-width: 24rem;
   min-height: 24rem;
-  background-image: url("/static/logo/SpecNews.png");
+  background-image: url("/logo/SpecNews.png");
   background-size: contain;
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  margin: 4rem 4rem 4rem 4rem;
+}
+.header .channel {
+  margin-right: 1rem;
+}
+.header .channel img {
+  vertical-align: bottom;
+}
+
+@media only screen and (max-width: 60rem) {
+  .header {
+    padding: 2rem;
+  }
+  .headerInner {
+    flex-direction: column-reverse;
+  }
+  .headerLogo {
+    min-width: 12rem;
+    min-height: 12rem;
+  }
 }
 
 .headerWho {
@@ -41,12 +84,49 @@ html {
   align-items: center;
   margin-right: 3rem;
 }
+.headerPersonAvatar {
+  border-radius: 5px;
+  overflow: hidden;
+}
+.headerPersonAvatar,
 .headerPersonAvatar img {
   width: 3rem;
   height: 3rem;
 }
 .headerPersonName {
   padding-left: 1rem;
+}
+p.lead {
+  font-size: 1.25rem;
+}
+
+.subscribe {
+  display: flex;
+  height: 2.5rem;
+  margin: 1rem 0;
+}
+.subscribe input,
+.subscribe button {
+  height: 2.5rem;
+  border: 0;
+  outline: 0;
+  margin: 0;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  box-sizing: border-box;
+}
+
+.subscribe input {
+  flex: 1;
+}
+.subscribe button {
+  flex: 0;
+  background-color: #9ae100;
+  font-weight: bold;
+}
+
+.channels {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .main {
@@ -65,11 +145,12 @@ main {
 .episodeArt {
   width: 3rem;
   height: 3rem;
-  margin-top: 2rem;
-  background-image: url("/static/logo/SpecNews.png");
+  margin-top: 1rem;
+  background-image: url("/logo/SpecNews.png");
   background-size: contain;
   background-position: 50% 50%;
   background-repeat: no-repeat;
+  flex: 0 0 3rem;
 }
 
 .episodeMain {
@@ -82,5 +163,10 @@ main {
   display: flex;
 }
 .episodeMeta > * {
-  margin-left: 1rem;
+  margin-right: 0.5rem;
+}
+
+.episode h3,
+.episode h5 {
+  margin: 1rem 0 1rem 0;
 }
