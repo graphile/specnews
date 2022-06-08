@@ -81,6 +81,12 @@ const IndexPage = () => {
                 title="Subscribe to SpecNews on Spotify"
               />
               <Channel
+                name="Apple"
+                logo="/logo/podcast-solid.svg"
+                url="https://podcasts.apple.com/us/podcast/specnews-graphql-digests/id1628494077"
+                title="Subscribe to SpecNews on Apple Podcasts"
+              />
+              <Channel
                 name="RSS"
                 logo="/logo/square-rss-solid.svg"
                 url="https://anchor.fm/s/9c882588/podcast/rss"
