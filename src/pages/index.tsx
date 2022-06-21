@@ -30,6 +30,17 @@ const IndexPage = () => {
           sizes="16x16"
           href="/favicon-16x16.png"
         />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://specnewspod.com/" />
+        <meta property="og:title" content="SpecNews: GraphQL WG Digests" />
+        <meta
+          property="og:description"
+          content="The latest GraphQL Working Group highlights straight to your ears; stay up to date in just a few minutes every month!"
+        />
+        <meta
+          property="og:image"
+          content="https://specnewspod.com/logo/SpecNews.png"
+        />
       </Helmet>
 
       <div className="header">
