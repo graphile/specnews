@@ -41,6 +41,12 @@ const IndexPage = () => {
           property="og:image"
           content="https://specnewspod.com/logo/SpecNews.png"
         />
+        <link
+          type="application/rss+xml"
+          rel="alternate"
+          title="SpecNews: GraphQL digests"
+          href="https://anchor.fm/s/9c882588/podcast/rss"
+        />
       </Helmet>
 
       <div className="header">
