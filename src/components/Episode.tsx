@@ -7,7 +7,7 @@ export const Episode: React.FC<{ episode: EpisodeDetails }> = ({ episode }) => {
     <div className="episode">
       <div className="episodeArt"></div>
       <div className="episodeMain">
-        <h5>{episode.supertitle}</h5>
+        <h5 id={episode.id}>{episode.supertitle}</h5>
         <h3>{episode.title}</h3>
         <div className="episodeMeta">
           <img

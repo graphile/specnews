@@ -2,6 +2,7 @@ import React from "react";
 import type { EpisodeDetails } from "./interfaces";
 
 export const ep0002: EpisodeDetails = {
+  id: "ep0002",
   supertitle: "SpecNews #2",
   title: "May 2022 WG ",
   embed: "https://anchor.fm/specnews/embed/episodes/2--May-2022-WG-e1jkglt",
