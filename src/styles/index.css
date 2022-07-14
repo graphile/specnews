@@ -166,6 +166,15 @@ main {
   padding-left: 2rem;
 }
 
+.episodeTitles a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.episodeTitles a:hover {
+  text-decoration: underline;
+}
+
 .episodeMeta {
   font-family: "Source Code Pro", Menlo, Ubuntu, mono;
   font-size: 0.8rem;
@@ -197,6 +206,17 @@ main {
 
 .input--hidden {
   display: none;
+}
+
+a.back {
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  margin-left: -2rem;
+  margin-top: 2rem;
+  margin-bottom: 0;
+  color: white;
 }
 
 /* From sib */
