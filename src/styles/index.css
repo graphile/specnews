@@ -234,3 +234,27 @@ a.back {
   color: #c0ccda;
 }
 */
+
+.transcriptEntry {
+  margin-bottom: 2rem;
+}
+
+.transcriptSpeaker {
+  position: relative;
+  height: 2em;
+}
+.transcriptSpeakerAvatar {
+  width: 2em;
+  height: 2em;
+}
+.transcriptSpeakerName {
+  position: absolute;
+  top: 0;
+  left: 3rem;
+  font-weight: bold;
+  padding-top: 0.5rem;
+}
+.transcriptText {
+  margin-left: 3rem;
+  padding-top: 0.5rem;
+}

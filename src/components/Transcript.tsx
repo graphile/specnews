@@ -1,22 +1,22 @@
 import React, { FC, PropsWithChildren } from "react";
 
 export const Transcript: FC<PropsWithChildren> = ({ children }) => (
-  <div>{children}</div>
+  <div className="transcript">{children}</div>
 );
 
 export const Avatar: FC<{ url: string; alt: string }> = ({ url, alt }) => (
-  <img width="20" height="20" src={url} alt={alt} />
+  <img className="transcriptSpeakerAvatar" src={url} alt={alt} />
 );
 
 export const Speech: FC<
   PropsWithChildren<{ name: string; avatarUrl: string }>
 > = ({ name, avatarUrl, children }) => (
-  <div>
-    <div>
+  <div className="transcriptEntry">
+    <div className="transcriptSpeaker">
       <Avatar url={avatarUrl} alt={name} />
-      {name}
+      <div className="transcriptSpeakerName">{name}</div>
     </div>
-    <div>{children}</div>
+    <div className="transcriptText">{children}</div>
   </div>
 );
 
