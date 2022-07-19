@@ -43,7 +43,10 @@ export const Hero: FC<{ episode?: EpisodeDetails }> = ({ episode }) => {
             </div>
             <p className="lead">
               {episode ? (
-                episode.description
+                <div>
+                  {episode.description}
+                  Find the transcript below
+                </div>
               ) : (
                 <>
                   <strong>SpecNews</strong> digests the latest GraphQL Working
@@ -55,7 +58,7 @@ export const Hero: FC<{ episode?: EpisodeDetails }> = ({ episode }) => {
             </p>
             {episode ? <AnchorEmbed src={episode.embed} /> : null}
             <hr />
-            <SignupFormLight />
+            {episode ? null : <SignupFormLight />}
             {/*
             <p>Subscribe to be notified of new episodes of SpecNews:</p>
             <form className="subscribe">
