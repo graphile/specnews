@@ -21,13 +21,13 @@ export const Speech: FC<
 );
 
 export const B: FC<PropsWithChildren> = ({ children }) => (
-  <Speech name="Benjie" avatarUrl="https://github.com/benjie.png">
+  <Speech name="Benjie" avatarUrl="/avatar/benjie.png">
     {children}
   </Speech>
 );
 
 export const J: FC<PropsWithChildren> = ({ children }) => (
-  <Speech name="Jem" avatarUrl="https://github.com/jemgillam.png">
+  <Speech name="Jem" avatarUrl="/avatar/jem.jpg">
     {children}
   </Speech>
 );
