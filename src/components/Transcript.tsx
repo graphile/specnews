@@ -1,7 +1,16 @@
 import React, { FC, PropsWithChildren } from "react";
+import { SignupFormLight } from "./SignupForm";
+
 
 export const Transcript: FC<PropsWithChildren> = ({ children }) => (
-  <div className="transcript">{children}</div>
+  <div>
+    <div className="transcript">{children}</div>
+    <hr />
+    <SignupFormLight />
+    <a className="back" href="/">
+      &laquo; Back to episodes
+    </a>
+  </div>
 );
 
 export const Avatar: FC<{ url: string; alt: string }> = ({ url, alt }) => (
