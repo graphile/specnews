@@ -158,37 +158,71 @@ export const SignupForm: React.FC = () => {
 */
 
 export const SignupFormLight: React.FC = () => {
+  const [state, setState] = React.useState(0);
+  const [error, setError] = React.useState<any>(null);
+  const formRef = React.useRef<HTMLFormElement | null>(null);
+  const onsubmit = React.useCallback(async (event: React.FormEvent) => {
+    if (!formRef.current) {
+      return;
+    }
+    event.preventDefault();
+    setError(null);
+    const body = new URLSearchParams();
+    const formData = new FormData(formRef.current);
+    formData.forEach((value, key) => {
+      body.append(key, String(value));
+    });
+    setState(1);
+    try {
+      await window.fetch(formRef.current.action, {
+        method: "POST",
+        body,
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+      });
+    } catch (e) {
+      setState(0);
+      setError(e);
+      return;
+    }
+    formRef.current.reset();
+    setState(2);
+  }, []);
   return (
     <div>
       <p>Subscribe to be notified of new episodes of SpecNews:</p>
       <form
-        id="sib-form"
+        ref={(el) => {
+          formRef.current = el;
+        }}
+        onSubmit={onsubmit}
+        className="ml-block-form subscribe"
+        action="https://assets.mailerlite.com/jsonp/109034/forms/61617088803899071/subscribe"
+        data-code=""
         method="POST"
-        action="https://6e384171.sibforms.com/serve/MUIEAPOwO8seacEokjag24hUuK00c86E1qDL0aYqk9LuTKrtJejCwclftqKuPb5xIEiXegR3hlcMEHdpl1OWwiRhdjuA_hLB4ScYCUGV-eBTOKrt_Q_biuvad9fJmb-204QqIjJVgVNaSlRzGgbvR3TxBqK5L8bk_6f_ndWnRArNHGQ6oI657pjUGOjPFzhHL5DLhOoFFKPMqoyR"
-        className="subscribe"
+        target="_blank"
+        id="sub-form"
       >
         <input
-          className="input"
-          type="text"
-          id="EMAIL"
-          name="EMAIL"
-          autoComplete="off"
-          placeholder="yourname@example.com"
-          data-required="true"
+          type="email"
+          className="input form-control"
+          data-inputmask=""
+          name="fields[email]"
+          placeholder={
+            state === 2 ? "Thanks; please check your email!" : "Email"
+          }
+          autoComplete="email"
           required
+          disabled={state === 1}
         />
-        <button form="sib-form" type="submit">
+        <button form="sub-form" type="submit" disabled={state === 1}>
           Subscribe
         </button>
-        <input
-          type="text"
-          name="email_address_check"
-          defaultValue=""
-          className="input--hidden"
-        />
-        <input type="hidden" name="locale" defaultValue="en" />
-        <input type="hidden" name="html_type" defaultValue="simple" />
+        <input type="hidden" name="ml-submit" defaultValue={1} />
+        <input type="hidden" name="anticsrf" defaultValue="true" />
       </form>
+      {error ? <p>ERROR: {String(error?.message ?? error)}</p> : null}
     </div>
   );
 };
