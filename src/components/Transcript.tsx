@@ -40,3 +40,11 @@ export const J: FC<PropsWithChildren> = ({ children }) => (
     {children}
   </Speech>
 );
+
+export const Timestamp: FC<PropsWithChildren> = ({ children }) => (
+  <div className="transcriptEntry">
+    <h4 className="timestamp">
+      {children}
+    </h4>
+  </div>
+);
