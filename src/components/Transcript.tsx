@@ -1,7 +1,6 @@
 import React, { FC, PropsWithChildren } from "react";
 import { SignupFormLight } from "./SignupForm";
 
-
 export const Transcript: FC<PropsWithChildren> = ({ children }) => (
   <div>
     <div className="transcript">{children}</div>
@@ -43,8 +42,6 @@ export const J: FC<PropsWithChildren> = ({ children }) => (
 
 export const Timestamp: FC<PropsWithChildren> = ({ children }) => (
   <div className="transcriptEntry">
-    <h4 className="timestamp">
-      {children}
-    </h4>
+    <h4 className="timestamp">{children}</h4>
   </div>
 );

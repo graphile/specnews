@@ -32,50 +32,147 @@ export const ep0001: EpisodeDetails = {
   ),
   transcript: (
     <Transcript>
-      <B>
-        Welcome to episode 1 of Spec News</B>
+      <B>Welcome to episode 1 of Spec News</B>
       <J>
-        keeping you up to date with advances in the GraphQL Spec and related foundation projects.
+        keeping you up to date with advances in the GraphQL Spec and related
+        foundation projects.
       </J>
-      <B>
-        We're your bespectacled hosts: I'm Benjie
-      </B>
+      <B>We're your bespectacled hosts: I'm Benjie</B>
       <J>
         and I'm Jem.
-        April’s working group saw the announcement of the GraphQL Foundation’s first Conference
+        <p>
+          April’s working group saw the announcement of the GraphQL Foundation’s
+          first Conference
+        </p>
       </J>
       <B>a preview of the future direction of GraphiQL</B>
+      <J>a proposal to allow unions to implement interfaces</J>
+      <B>and a discussion of the payload format to use for streams</B>
+      <Timestamp>[0:33] GraphQL Foundation Conference</Timestamp>
       <J>
-      a proposal to allow unions to implement interfaces
+        The first item was rather exciting - Lee introduced the{" "}
+        <a href="https://graphql.org/foundation/graphql-conf/" target="_new">
+          first official conference organised by the GraphQL Foundation
+        </a>
+        . To make things easier, the conference will be colocated with
+        OpenJSWorld on June 7th and 8th in Austin, but it's important to note
+        that the GraphQL part is not JavaScript-specific!
       </J>
       <B>
-      and a discussion of the payload format to use for streams
+        Rather than being an end-user conference, the audience is expected to
+        consist of working group attendees, GraphQL implementers, and other
+        people well versed in topics around the GraphQL specification. Very
+        exciting - get your talk submissions in now!
+      </B>
+      <Timestamp>[1:11] Update on GraphiQL</Timestamp>
+      <J>Tim joined us to give us an update on the GraphiQL&mdash;</J>
+      <B>that's Graph i Q L – the GraphQL IDE</B>
+      <J>
+        &mdash;version 2 design proposals. What was presented looks fantastic -
+        a minimalist and flexible design that expands as you become more
+        familiar. The reception was very positive, tempered only by the working
+        group attendees suggesting improvements to the design, for example
+        allowing additional space for longer-form markdown documentation,
+        improving discoverability of variables, and other such matters. I hope
+        Tim found the feedback helpful and we can't wait to see the project
+        advance!
+      </J>
+      <Timestamp>[1:54] Unions declaring interfaces</Timestamp>
+      <B>
+        Next up was Yaacov with a proposal to allow unions to declare
+        implementation of interfaces. After some discussion this boiled down to
+        a constraint - the union doesn't itself implement the interfaces,
+        instead it requires that all object types within it implement the
+        interfaces - an interesting proposal. The working group pushed Yaacov to
+        consider allowing fields in the interface to be resolved directly on the
+        selection set (without the need for a fragment) for consistency with
+        interfaces elsewhere in the spec. The balance as always is between
+        simplicity and power.
       </B>
       <J>
-        The first item was rather exciting - Lee introduced the first official conference organised by the GraphQL Foundation. To make things easier, the conference will be colocated with OpenJSWorld on June 7th and 8th in Austin, but it's important to note that the GraphQL part is not JavaScript-specific!
+        To advance the proposal further, Lee suggested that Yaacov:
+        <ul>
+          <li>
+            details the impact on execution and particularly on selection sets;
+          </li>
+          <li>looks for and documents precedent from other languages;</li>
+          <li>
+            and considers if a different keyword rather than "implements" would
+            make sense.
+          </li>
+        </ul>
+        The proposal was advanced to RFC stage 1 - &quot;Proposal&quot;.
       </J>
-      <B>
-        Rather than being an end-user conference, the audience is expected to consist of working group attendees, GraphQL implementers, and other people well versed in topics around the GraphQL specification. Very exciting - get your talk submissions in now!
-      </B>
-      <Timestamp>[Time Stamp] Title</Timestamp>
+      <B>And may well make it harder for me to deprecate unions!</B>
+      <Timestamp>[3:01] The payload format to use for streams</Timestamp>
       <J>
-
+        Champion of the defer and stream proposals, Rob, was up next discussing
+        the payload format to use for streams. It was established that nulls
+        must bubble only to the boundary of the payload and no further
+      </J>
+      <B>(since you can't go back in time)</B>
+      <J>
+        indeed; however the challenge is in distinguishing between actual nulls
+        and errors.
       </J>
       <B>
-        
+        For defer, the value is always an object, so returning null is obviously
+        an error, but you can stream any data type.
       </B>
       <J>
-
+        <p>
+          The current proposal is that the stream data should always be wrapped
+          in a list, so that nulls stand out. After discussion this was
+          generally agreed.
+        </p>
+        <p>
+          Further discussion occurred around whether the index should be
+          included in the payload, and if so: where? One consideration here is
+          potential future batching which was discussed in some depth, along
+          with possible payload shapes for including multiple stream or defer
+          payloads in the same GraphQL response payload - for example using an
+          "incremental" field - this should help to avoid client "thrashing".
+        </p>
       </J>
       <B>
-
+        <p>
+          Definitely more investigation to be done here, but there’s at least
+          consensus to put the start index in the path.
+        </p>
+        <p>
+          Yaacov then guided the conversation to the topic of "async iterators
+          of iterables," a rather JavaScript-specific topic but one which may
+          have influence on other implementations.
+        </p>
       </B>
       <J>
-
+        It's common for other implementations to be translations of the
+        reference implementation into other programming languages.
       </J>
       <B>
-
+        The motivation around returning iterators rather than the values
+        directly is one centred around efficiency; going back to the runloop
+        after every value could be quite expensive compared to processing
+        multiple values in the same runloop tick.
       </B>
+      <J>
+        The question also extended to returning the data in this shape via the
+        GraphQL response, however it was pointed out that after compression the
+        difference between the solutions would be marginal so this shouldn't be
+        a weighty consideration. Further discussion was redirected to{" "}
+        <a
+          href="https://github.com/graphql/graphql-wg/discussions/939"
+          target="_new"
+        >
+          GitHub discussions
+        </a>{" "}
+        since the meeting was over time.
+      </J>
+      <B>
+        And with that, that's all from us at Spec News and we bid you a fond
+        farewell.
+      </B>
+      <J>Cheerio!</J>
     </Transcript>
   ),
 };
