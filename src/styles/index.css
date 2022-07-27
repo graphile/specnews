@@ -258,3 +258,7 @@ a.back {
   margin-left: 3rem;
   padding-top: 0.5rem;
 }
+.code {
+  font-family: "Source Code Pro", Menlo, Ubuntu, mono;
+  background-color: rgba(175, 184, 193, 0.2)
+}

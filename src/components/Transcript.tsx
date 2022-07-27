@@ -45,3 +45,6 @@ export const Timestamp: FC<PropsWithChildren> = ({ children }) => (
     <h4 className="timestamp">{children}</h4>
   </div>
 );
+export const Code: FC<PropsWithChildren> = ({ children }) => (
+  <span className="code">{children}</span>
+);

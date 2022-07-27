@@ -1,6 +1,6 @@
 import React from "react";
 import type { EpisodeDetails } from "./interfaces";
-import { Transcript, J, B, Timestamp } from "../components/Transcript";
+import { Transcript, J, B, Timestamp, Code } from "../components/Transcript";
 
 export const ep0002: EpisodeDetails = {
   id: "ep0002",
@@ -11,11 +11,12 @@ export const ep0002: EpisodeDetails = {
   description: (
     <div>
       <p>
-        May 2022's working group saw the return of discussions around higher
-        order abstract types in GraphQL, the availability of a canary release of
-        client-controlled nullability, discussions around the shape of iterables
-        and payloads for defer and stream and the advancement of "oneof input
-        objects" to RFC stage 2. Join hosts Benjie and Jem for the details!
+        May 2022&apos;s working group saw the return of discussions around
+        higher order abstract types in GraphQL, the availability of a canary
+        release of client-controlled nullability, discussions around the shape
+        of iterables and payloads for defer and stream and the advancement of{" "}
+        <Code>&#64;oneof</Code> input objects to RFC stage 2. Join hosts Benjie
+        and Jem for the details!
       </p>
       <p>
         Music by{" "}
@@ -54,15 +55,16 @@ export const ep0002: EpisodeDetails = {
         stream
       </J>
       <B>
-        and the advancement of &quot;oneof input objects&quot; to RFC stage 2.
+        and the advancement of <Code>&#64;oneof</Code> input objects&quot; to
+        RFC stage 2.
       </B>
-      <Timestamp>[0:xx] Action Items</Timestamp>
+      <Timestamp>[0:34] Action Items</Timestamp>
       <J>
         Action items&mdash;following up from Benjie creating a SECURITY policy
         in the graphql&#8208;wg repo, Benjie suggested extending this policy to
         all Foundation projects and gained approval to do so.
       </J>
-      <Timestamp>[0:xx] Higher order abstract types</Timestamp>
+      <Timestamp>[0:51] Higher order abstract types</Timestamp>
       <B>
         Yaacov returned with a new proposal following up from the &quot;unions
         implementing interfaces&quot; proposal from the last working group. This
@@ -93,104 +95,90 @@ export const ep0002: EpisodeDetails = {
         certain interfaces. Yaacov is going to refine the tests ready for next
         working group.
       </J>
-      <Timestamp>[1:54] Unions declaring interfaces</Timestamp>
+      <Timestamp>[2:18] Client&#8208;controlled nullability update</Timestamp>
       <B>
-        Next up was Yaacov with a proposal to allow unions to declare
-        implementation of interfaces. After some discussion this boiled down to
-        a constraint&mdash;the union doesn&apos;t itself implement the
-        interfaces, instead it requires that all object types within it
-        implement the interfaces&mdash;an interesting proposal. The working
-        group pushed Yaacov to consider allowing fields in the interface to be
-        resolved directly on the selection set (without the need for a fragment)
-        for consistency with interfaces elsewhere in the spec. The balance as
-        always is between simplicity and power.
+        Alex returned with an update on the status of client&#8208;controlled
+        nullability: there's a canary release of the functionality in
+        graphql&#8208;js and the latest HotChocolate supports it in .NET too.
+        Apollo are also working on support for it.
       </B>
       <J>
-        To advance the proposal further, Lee suggested that Yaacov:
-        <ul>
-          <li>
-            details the impact on execution and particularly on selection sets;
-          </li>
-          <li>looks for and documents precedent from other languages;</li>
-          <li>
-            and considers if a different keyword rather than
-            &quot;implements&quot; would make sense.
-          </li>
-        </ul>
-        The proposal was advanced to RFC stage 1: &quot;Proposal&quot;.
-      </J>
-      <B>And may well make it harder for me to deprecate unions!</B>
-      <Timestamp>[3:01] The payload format to use for streams</Timestamp>
-      <J>
-        Champion of the defer and stream proposals, Rob, was up next discussing
-        the payload format to use for streams. It was established that nulls
-        must bubble only to the boundary of the payload and no further
-      </J>
-      <B>(since you can&apos;t go back in time)</B>
-      <J>
-        indeed; however the challenge is in distinguishing between actual nulls
-        and errors.
+        One of the concerns raised was that applying client&#8208;controlled
+        nullability operators in one fragment may break another fragment
+        that&apos;s defined in another part of the codebase; though this
+        isn&apos;t something that should stop the proposal, it&apos;s definitely
+        a trade&#8208;off worth being aware of.
       </J>
       <B>
-        For defer, the value is always an object, so returning null is obviously
-        an error, but you can stream any data type.
+        Lee tasked Alex with creating discussion threads to help resolve the
+        outstanding questions with the proposals. A discussion around naming
+        arose again, suggesting that &quot;assertion&quot; may be a better name
+        for the bang symbol, and &quot;error boundary&quot; for the question
+        mark symbol.
       </B>
       <J>
-        <p>
-          The current proposal is that the stream data should always be wrapped
-          in a list, so that nulls stand out. After discussion this was
-          generally agreed.
-        </p>
-        <p>
-          Further discussion occurred around whether the index should be
-          included in the payload, and if so: where? One consideration here is
-          potential future batching which was discussed in some depth, along
-          with possible payload shapes for including multiple stream or defer
-          payloads in the same GraphQL response payload&mdash;for example using
-          an &quot;incremental&quot; field&mdash;this should help to avoid
-          client &quot;thrashing&quot;.
-        </p>
+        Ivan is keen to establish the names before they get merged into
+        GraphQL&#8208;js for fear of future breaking changes.
       </J>
+      <Timestamp>
+        [3:15] Defer/Stream: asynchronous iterators of iterables versus of items
+      </Timestamp>
       <B>
-        <p>
-          Definitely more investigation to be done here, but there&apos;s at
-          least consensus to put the start index in the path.
-        </p>
-        <p>
-          Yaacov then guided the conversation to the topic of &quot;async
-          iterators of iterables&quot;, a rather JavaScript&#8208;specific topic
-          but one which may have influence on other implementations.
-        </p>
+        Yaacov next with a continuation of the asynchronous iterators of
+        iterables topic from last meeting.
       </B>
       <J>
-        It&apos;s common for other implementations to be translations of the
-        reference implementation into other programming languages.
+        There was general agreement that if we have batches of data available to
+        us on the backend, we should deliver batches of data to the
+        client&mdash;not least because it influences the way that clients will
+        handle these payloads. However, returning iterators where a VALUE would
+        normally be expected&mdash;simply because it&apos;s a stream&mdash;would
+        be surprising and would give a strange developer experience.
       </J>
       <B>
-        The motivation around returning iterators rather than the values
-        directly is one centred around efficiency; going back to the runloop
-        after every value could be quite expensive compared to processing
-        multiple values in the same runloop tick.
+        However, enforcing that an iterator is always returned might help avoid
+        developers facing the trap that is client thrashing. At this point,
+        discussion seemed to be relatively javascript&#8208;centric, so was
+        redirected to asynchronous channels.
       </B>
+      <Timestamp>[4:04] Defer/Stream: Stream Payload index format</Timestamp>
       <J>
-        The question also extended to returning the data in this shape via the
-        GraphQL response, however it was pointed out that after compression the
-        difference between the solutions would be marginal so this
-        shouldn&apos;t be a weighty consideration. Further discussion was
-        redirected to{" "}
-        <a
-          href="https://github.com/graphql/graphql-wg/discussions/939"
-          target="_new"
-        >
-          GitHub discussions
-        </a>{" "}
-        since the meeting was over time.
+        Rob returned with discussion of the index format in stream payloads; it
+        has been established since the last working group that including the
+        index is essential otherwise ambiguities can occur. Since the
+        append&#8208;only mechanism has been ruled out, discussion centered
+        around choosing between &quot;at index&quot;, &quot;at indices&quot; and
+        &quot;including the index in the path&quot;.
       </J>
       <B>
-        And with that, that's all from us at Spec News and we bid you a fond
-        farewell.
+        The conclusion was that the operation is &quot;set at a range, where the
+        range starts at the index given in the path, and the length of the range
+        is the length of the data.&quot; Though this makes
+        out&#8208;of&#8208;order delivery and sparse lists trickier, it was
+        agreed that the benefits in terms of simplicity outweighed these
+        concerns.
       </B>
-      <J>Cheerio!</J>
+      <Timestamp>
+        [4:50] <Code>&#64;oneof</Code> input objects RFC
+      </Timestamp>
+      <J>
+        Next up was Benjie with a request to advance <Code>&#64;oneof</Code>{" "}
+        input objects to RFC stage 2: &quot;Draft&quot;. Benjie&apos;s main
+        hesitation is around intent to extend <Code>&#64;oneof</Code> to output
+        types&mdash;concerned that if we never choose to add oneof to output
+        types then the significant differences between <Code>&#64;oneof</Code>{" "}
+        inputs versus unions and interfaces could make it undesirable. The
+        working group reassured that <Code>&#64;oneof</Code> input objects seems
+        to be the better input union solution independent of whether it&apos;s
+        available on output or not.
+      </J>
+      <B>
+        Having established that, it was clear that the proposal was ready to
+        advance and has been raised to RFC2 status. And with that, the meeting
+        drew to an end a mere one minute over time, and that's all from us at
+        Spec News! We bid you a fond farewell.
+      </B>
+      <J>Ta ra!</J>
     </Transcript>
   ),
 };
