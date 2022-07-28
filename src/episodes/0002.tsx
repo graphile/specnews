@@ -15,7 +15,7 @@ export const ep0002: EpisodeDetails = {
         higher order abstract types in GraphQL, the availability of a canary
         release of client-controlled nullability, discussions around the shape
         of iterables and payloads for defer and stream and the advancement of{" "}
-        <Code>&#64;oneof</Code> input objects to RFC stage 2. Join hosts Benjie
+        <Code>&#64;oneOf</Code> input objects to RFC stage 2. Join hosts Benjie
         and Jem for the details!
       </p>
       <p>
@@ -55,7 +55,7 @@ export const ep0002: EpisodeDetails = {
         stream
       </J>
       <B>
-        and the advancement of <Code>&#64;oneof</Code> input objects&quot; to
+        and the advancement of <Code>&#64;oneOf</Code> input objects&quot; to
         RFC stage 2.
       </B>
       <Timestamp>[0:34] Action Items</Timestamp>
@@ -159,16 +159,16 @@ export const ep0002: EpisodeDetails = {
         concerns.
       </B>
       <Timestamp>
-        [4:50] <Code>&#64;oneof</Code> input objects RFC
+        [4:50] <Code>&#64;oneOf</Code> input objects RFC
       </Timestamp>
       <J>
-        Next up was Benjie with a request to advance <Code>&#64;oneof</Code>{" "}
+        Next up was Benjie with a request to advance <Code>&#64;oneOf</Code>{" "}
         input objects to RFC stage 2: &quot;Draft&quot;. Benjie&apos;s main
-        hesitation is around intent to extend <Code>&#64;oneof</Code> to output
-        types&mdash;concerned that if we never choose to add oneof to output
-        types then the significant differences between <Code>&#64;oneof</Code>{" "}
+        hesitation is around intent to extend <Code>&#64;oneOf</Code> to output
+        types&mdash;concerned that if we never choose to add oneOf to output
+        types then the significant differences between <Code>&#64;oneOf</Code>{" "}
         inputs versus unions and interfaces could make it undesirable. The
-        working group reassured that <Code>&#64;oneof</Code> input objects seems
+        working group reassured that <Code>&#64;oneOf</Code> input objects seems
         to be the better input union solution independent of whether it&apos;s
         available on output or not.
       </J>
