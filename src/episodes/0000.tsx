@@ -26,30 +26,30 @@ export const ep0000: EpisodeDetails = {
   ),
   transcript: (
     <Transcript>
-      <B>Hey folks; welcome to Spec News, a new podcast from me, Benjie</B>
-      <J>
+      <B x>Hey folks; welcome to Spec News, a new podcast from me, Benjie</B>
+      <J x>
         and from me, Jem. Since 2019 Benjie's been taking notes at most of the
         GraphQL Working Group sessions and then giving me the rundown
         afterwards.
       </J>
-      <B>
+      <B x>
         We figured, since I'm already producing a summary for one person, why
         not extend that to everyone?
       </B>
-      <J>And since we both wear spectacles Spec News was born</J>
-      <B>the name of course having nothing to do with the GraphQL Spec.</B>
-      <J>
+      <J x>And since we both wear spectacles Spec News was born</J>
+      <B x>the name of course having nothing to do with the GraphQL Spec.</B>
+      <J x>
         Of course. Anyway, join us each month for a quickfire summary of the
         latest developments in the GraphQL Working Group
       </J>
-      <B>
+      <B x>
         and perhaps some bonus episodes from time to time spotlighting
         particular proposals
       </B>
-      <J>and people!</J>
-      <B>that are helping to advance GraphQL.</B>
-      <J>Speak to you soon</J>
-      <B>and don't forget your specs!</B>
+      <J x>and people!</J>
+      <B x>that are helping to advance GraphQL.</B>
+      <J x>Speak to you soon</J>
+      <B x>and don't forget your specs!</B>
     </Transcript>
   ),
 };
