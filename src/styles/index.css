@@ -60,6 +60,15 @@ body {
 .header .channel img {
   vertical-align: bottom;
 }
+.episodeLogo {
+  flex: 0 0 0;
+  min-width: 10rem;
+  min-height: 10rem;
+  background-image: url("/logo/SpecNews.png");
+  background-size: contain;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
 
 @media only screen and (max-width: 60rem) {
   .header {

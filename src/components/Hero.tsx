@@ -42,12 +42,7 @@ export const Hero: FC<{ episode?: EpisodeDetails }> = ({ episode }) => {
               </div>
             </div>
             <p className="lead">
-              {episode ? (
-                <div>
-                  {episode.description}
-                  Find the transcript below
-                </div>
-              ) : (
+              {episode ? null : (
                 <>
                   <strong>SpecNews</strong> digests the latest GraphQL Working
                   Group happenings and delivers the highlights straight to your
@@ -58,48 +53,44 @@ export const Hero: FC<{ episode?: EpisodeDetails }> = ({ episode }) => {
             </p>
             {episode ? <AnchorEmbed src={episode.embed} /> : null}
             <hr />
-            {episode ? null : <SignupFormLight />}
-            {/*
-            <p>Subscribe to be notified of new episodes of SpecNews:</p>
-            <form className="subscribe">
-              <input placeholder="yourname@example.com" />
-              <button type="submit">Subscribe</button>
-            </form>
-            */}
-            <div className="channels">
-              <Channel
-                name="Spotify"
-                logo="/logo/spotify-brands.svg"
-                url="https://open.spotify.com/show/69vo1Wrlda6EP3EzIZnzjf"
-                title="Subscribe to SpecNews on Spotify"
-              />
-              <Channel
-                name="Apple"
-                logo="/logo/podcast-solid.svg"
-                url="https://podcasts.apple.com/us/podcast/specnews-graphql-digests/id1628494077"
-                title="Subscribe to SpecNews on Apple Podcasts"
-              />
-              <Channel
-                name="RSS"
-                logo="/logo/square-rss-solid.svg"
-                url="https://anchor.fm/s/9c882588/podcast/rss"
-                title="Subscribe via RSS"
-              />
-              <Channel
-                name="Twitter"
-                logo="/logo/twitter-brands.svg"
-                url="https://twitter.com/SpecNewsPod"
-                title="Follow @SpecNewsPod on Twitter"
-              />
-            </div>
             {episode ? (
               <a className="back" href="/">
                 &laquo; Back to episodes
               </a>
-            ) : null}
+            ) : (
+              <div>
+                <SignupFormLight />
+                <div className="channels">
+                  <Channel
+                    name="Spotify"
+                    logo="/logo/spotify-brands.svg"
+                    url="https://open.spotify.com/show/69vo1Wrlda6EP3EzIZnzjf"
+                    title="Subscribe to SpecNews on Spotify"
+                  />
+                  <Channel
+                    name="Apple"
+                    logo="/logo/podcast-solid.svg"
+                    url="https://podcasts.apple.com/us/podcast/specnews-graphql-digests/id1628494077"
+                    title="Subscribe to SpecNews on Apple Podcasts"
+                  />
+                  <Channel
+                    name="RSS"
+                    logo="/logo/square-rss-solid.svg"
+                    url="https://anchor.fm/s/9c882588/podcast/rss"
+                    title="Subscribe via RSS"
+                  />
+                  <Channel
+                    name="Twitter"
+                    logo="/logo/twitter-brands.svg"
+                    url="https://twitter.com/SpecNewsPod"
+                    title="Follow @SpecNewsPod on Twitter"
+                  />
+                </div>
+              </div>
+            )}
           </div>
           <div className="headerGap"></div>
-          <div className="headerLogo"></div>
+          {episode ? null : <div className="headerLogo"></div>}
         </div>
       </div>
     </>

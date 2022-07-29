@@ -27,6 +27,7 @@ export const EpisodePage: FC<{ episode: EpisodeDetails }> = ({ episode }) => {
       <Hero episode={episode} />
       <div className="main">
         <main>
+          <div>{episode.description}</div>
           {episode.transcript ? (
             <div>
               <h2>Transcript</h2>
