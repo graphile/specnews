@@ -34,35 +34,34 @@ export const ep0003: EpisodeDetails = {
   ),
   transcript: (
     <Transcript>
-      <B>Welcome to episode 3 of Spec News</B>
-      <J>
+      <B x>Welcome to episode 3 of Spec News</B>
+      <J x>
         keeping you up to date with advances in the GraphQL Spec and related
         foundation projects.
       </J>
-      <B>We&apos;re your bespectacled hosts: I&apos;m Benjie</B>
-      <J>
-        and I&apos;m Jem.
-        <p>
-          June 2022&apos;s working-group-meeting saw the closure of a number of
-          action items
-        </p>
+      <B x>We&apos;re your bespectacled hosts: I&apos;m Benjie</B>
+      <J x>
+        and I&apos;m Jem. <br />
+        <br />
+        June 2022&apos;s working-group-meeting saw the closure of a number of
+        action items
       </J>
-      <B>
+      <B x>
         the introduction of a new &quot;composite schemas&quot; working group
       </B>
-      <J>
+      <J x>
         a discussion around an <Code>&#64;experimental</Code> directive
       </J>
-      <B>a new validation rule to assert operation types exist</B>
-      <J>
+      <B x>a new validation rule to assert operation types exist</B>
+      <J x>
         an update on the client-controlled nullability, <Code>&#64;oneOf</Code>,
         and &quot;unions implementing interfaces&quot; RFCs
       </J>
-      <B>
+      <B x>
         and a number of spicy takes on the GraphQL spec itself&mdash;let&apos;s
         get into it!
       </B>
-      <Timestamp>[0:xx] Action items</Timestamp>
+      <Timestamp>[0:45] Action items</Timestamp>
       <J>
         <p>
           First up: action items. Benjie has added a SECURITY document to the
@@ -86,7 +85,7 @@ export const ep0003: EpisodeDetails = {
           .
         </p>
       </J>
-      <Timestamp>[0:xx] Composite schemas working group</Timestamp>
+      <Timestamp>[1:30] Composite schemas working group</Timestamp>
       <B>
         The composite schemas working group was proposed by yours truly&mdash;a
         working group to look at the commonality between all the various
@@ -103,13 +102,13 @@ export const ep0003: EpisodeDetails = {
         , and an initial meeting will be announced in the next few weeks.
       </B>
       <Timestamp>
-        [0:xx] <Code>&#64;experimental</Code> directive
+        [2:02] <Code>&#64;experimental</Code> directive
       </Timestamp>
       <J>
         New attendee Martin has proposed a new <Code>&#64;experimental</Code>{" "}
         directive&mdash;
       </J>
-      <B>that's a directive named &quot;experimental&quot;</B>
+      <B x>that's a directive named &quot;experimental&quot;</B>
       <J>
         <p>
           &mdash;which is the counterpart of deprecated. Where{" "}
@@ -125,10 +124,10 @@ export const ep0003: EpisodeDetails = {
           <Code>&#64;opt-in</Code> directive&mdash;
         </p>
       </J>
-      <B>that's a directive named &quot;opt-in&quot;</B>
+      <B x>that's a directive named &quot;opt-in&quot;</B>
       <J>&mdash;which could work a little like feature flagging.</J>
       <Timestamp>
-        [3:xx] Add validation rule that operation types exist
+        [2:48] Add validation rule that operation types exist
       </Timestamp>
       <B>
         Another new attendee, Ben, has pointed out that the GraphQL Spec doesn't
@@ -145,7 +144,7 @@ export const ep0003: EpisodeDetails = {
         a very good chance of becoming RFC2 at the next working group since it
         already has an implementation in place.
       </B>
-      <Timestamp>[3:xx] Client-controlled nullability update</Timestamp>
+      <Timestamp>[3:19] Client-controlled nullability update</Timestamp>
       <J>
         Client-controlled nullability champion Alex has raised discussion
         threads around both{" "}
@@ -184,7 +183,7 @@ export const ep0003: EpisodeDetails = {
         emoji to take a 4 minute break!
       </B>
       <Timestamp>
-        [4:xx] <Code>&#64;oneOf</Code> update
+        [4:15] <Code>&#64;oneOf</Code> update
       </Timestamp>
       <J>
         <p>
@@ -198,10 +197,11 @@ export const ep0003: EpisodeDetails = {
           <Code>oneOf</Code> was renamed to <Code>isOneOf</Code> to match{" "}
           <Code>isDeprecated</Code>, and a rule was added forbidding{" "}
           <Code>&#64;oneOf</Code> to be applied to an input object extension.
-          Benjie also raised a draft PR for oneOf objects&mdash;
+          Benjie also raised a draft PR for <Code>&#64;oneOf</Code>{" "}
+          objects&mdash;
         </p>
       </J>
-      <B>
+      <B x>
         i.e. <Code>&#64;oneOf</Code> for outputs rather than inputs
       </B>
       <J>
@@ -225,7 +225,7 @@ export const ep0003: EpisodeDetails = {
           there.
         </p>
       </J>
-      <Timestamp>[4:xx]</Timestamp>
+      <Timestamp>[5:39] Unions implementing interfaces</Timestamp>
       <B>
         <p>
           Yaacov returned with an update on &quot;unions implementing
@@ -258,7 +258,7 @@ export const ep0003: EpisodeDetails = {
         them would be a valuable outcome.
       </B>
       <J>Valuable indeed!</J>
-      <Timestamp>[xx:xx] Editorial changes to the Spec</Timestamp>
+      <Timestamp>[6:58] Editorial changes to the Spec</Timestamp>
       <J>
         Next up was Roman who recently{" "}
         <a
