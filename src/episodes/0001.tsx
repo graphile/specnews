@@ -32,22 +32,22 @@ export const ep0001: EpisodeDetails = {
   ),
   transcript: (
     <Transcript>
-      <B>Welcome to episode 1 of Spec News</B>
-      <J>
+      <B x>Welcome to episode 1 of Spec News</B>
+      <J x>
         keeping you up to date with advances in the GraphQL Spec and related
         foundation projects.
       </J>
-      <B>We&apos;re your bespectacled hosts: I&apos;m Benjie</B>
-      <J>
+      <B x>We&apos;re your bespectacled hosts: I&apos;m Benjie</B>
+      <J x>
         and I&apos;m Jem.
-        <p>
-          April&apos;s working group saw the announcement of the GraphQL
-          Foundation&apos;s first Conference
-        </p>
+        <br />
+        <br />
+        April&apos;s working group saw the announcement of the GraphQL
+        Foundation&apos;s first Conference
       </J>
-      <B>a preview of the future direction of GraphiQL</B>
-      <J>a proposal to allow unions to implement interfaces</J>
-      <B>and a discussion of the payload format to use for streams</B>
+      <B x>a preview of the future direction of GraphiQL</B>
+      <J x>a proposal to allow unions to implement interfaces</J>
+      <B x>and a discussion of the payload format to use for streams</B>
       <Timestamp>[0:33] GraphQL Foundation Conference</Timestamp>
       <J>
         The first item was rather exciting&mdash;Lee introduced the{" "}
@@ -66,7 +66,7 @@ export const ep0001: EpisodeDetails = {
       </B>
       <Timestamp>[1:11] Update on GraphiQL</Timestamp>
       <J>Tim joined us to give us an update on the GraphiQL&mdash;</J>
-      <B>that&apos;s &quot;Graph i Q L&quot;: the GraphQL IDE</B>
+      <B x>that&apos;s &quot;Graph i Q L&quot;: the GraphQL IDE</B>
       <J>
         &mdash;version 2 design proposals. What was presented looks fantastic: a
         minimalist and flexible design that expands as you become more familiar.
@@ -109,7 +109,7 @@ export const ep0001: EpisodeDetails = {
         the payload format to use for streams. It was established that nulls
         must bubble only to the boundary of the payload and no further
       </J>
-      <B>(since you can&apos;t go back in time)</B>
+      <B x>(since you can&apos;t go back in time)</B>
       <J>
         indeed; however the challenge is in distinguishing between actual nulls
         and errors.

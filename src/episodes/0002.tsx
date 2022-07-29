@@ -33,28 +33,28 @@ export const ep0002: EpisodeDetails = {
   ),
   transcript: (
     <Transcript>
-      <B>Welcome to episode 2 of Spec News</B>
-      <J>
+      <B x>Welcome to episode 2 of Spec News</B>
+      <J x>
         keeping you up to date with advances in the GraphQL Spec and related
         foundation projects.
       </J>
-      <B>We&apos;re your bespectacled hosts: I&apos;m Benjie</B>
-      <J>
+      <B x>We&apos;re your bespectacled hosts: I&apos;m Benjie</B>
+      <J x>
         and I&apos;m Jem.
-        <p>
-          May&apos;s working group saw the return of discussions around higher
-          order abstract types in GraphQL
-        </p>
+        <br />
+        <br />
+        May&apos;s working group saw the return of discussions around higher
+        order abstract types in GraphQL
       </J>
-      <B>
+      <B x>
         the availability of a canary release of client&#8208;controlled
         nullability
       </B>
-      <J>
+      <J x>
         discussions around the shape of iterables and payloads for defer and
         stream
       </J>
-      <B>
+      <B x>
         and the advancement of <Code>&#64;oneOf</Code> input objects&quot; to
         RFC stage 2.
       </B>
@@ -121,7 +121,7 @@ export const ep0002: EpisodeDetails = {
         GraphQL&#8208;js for fear of future breaking changes.
       </J>
       <Timestamp>
-        [3:15] Defer/Stream: asynchronous iterators of iterables versus of items
+        [3:15] Defer/Stream: Asynchronous iterators of iterables versus of items
       </Timestamp>
       <B>
         Yaacov next with a continuation of the asynchronous iterators of
@@ -141,7 +141,7 @@ export const ep0002: EpisodeDetails = {
         discussion seemed to be relatively javascript&#8208;centric, so was
         redirected to asynchronous channels.
       </B>
-      <Timestamp>[4:04] Defer/Stream: Stream Payload index format</Timestamp>
+      <Timestamp>[4:04] Defer/Stream: Stream payload index format</Timestamp>
       <J>
         Rob returned with discussion of the index format in stream payloads; it
         has been established since the last working group that including the
