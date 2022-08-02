@@ -27,18 +27,8 @@ export const Episode: React.FC<{ episode: EpisodeDetails; full?: boolean }> = ({
           </h3>
         </div>
         <div className="episodeMeta">
-          <img
-            src="https://github.com/benjie.png"
-            width="20"
-            height="20"
-            alt="Benjie"
-          />
-          <img
-            src="https://github.com/jemgillam.png"
-            width="20"
-            height="20"
-            alt="Jem"
-          />
+          <img src="/avatar/benjie.png" width="20" height="20" alt="Benjie" />
+          <img src="/avatar/jem.jpg" width="20" height="20" alt="Jem" />
           <span>{episode.date}</span>
         </div>
         <div>{episode.description}</div>
