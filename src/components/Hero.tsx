@@ -12,6 +12,9 @@ export const Hero: FC<{ episode?: EpisodeDetails }> = ({ episode }) => {
           <div className="headerText">
             {episode ? (
               <>
+                <a className="close" href="/">
+                  X
+                </a>
                 <h3>{episode.supertitle}</h3>
                 <h1>{episode.title}</h1>
               </>
@@ -52,12 +55,8 @@ export const Hero: FC<{ episode?: EpisodeDetails }> = ({ episode }) => {
               )}
             </p>
             {episode ? <AnchorEmbed src={episode.embed} /> : null}
-            <hr />
-            {episode ? (
-              <a className="back" href="/">
-                &laquo; Back to episodes
-              </a>
-            ) : (
+            {episode ? null : <hr />}
+            {episode ? null : (
               <div>
                 <SignupFormLight />
                 <div className="channels">

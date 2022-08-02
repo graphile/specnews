@@ -227,6 +227,17 @@ a.back {
   margin-bottom: 0;
   color: white;
 }
+a.close {
+  display: block;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-left: -2rem;
+  margin-top: 2rem;
+  margin-bottom: 0;
+  color: white;
+  float: right;
+}
 
 /* From sib */
 /* <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css"> */
