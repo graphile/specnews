@@ -60,6 +60,15 @@ body {
 .header .channel img {
   vertical-align: bottom;
 }
+.episodeLogo {
+  flex: 0 0 0;
+  min-width: 10rem;
+  min-height: 10rem;
+  background-image: url("/logo/SpecNews.png");
+  background-size: contain;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
 
 @media only screen and (max-width: 60rem) {
   .header {
@@ -166,6 +175,15 @@ main {
   padding-left: 2rem;
 }
 
+.episodeTitles a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.episodeTitles a:hover {
+  text-decoration: underline;
+}
+
 .episodeMeta {
   font-family: "Source Code Pro", Menlo, Ubuntu, mono;
   font-size: 0.8rem;
@@ -199,6 +217,27 @@ main {
   display: none;
 }
 
+a.back {
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  margin-left: -2rem;
+  margin-top: 2rem;
+  margin-bottom: 0;
+  color: white;
+}
+a.close {
+  display: block;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 0.5rem;
+  margin-left: -2rem;
+  margin-top: 2rem;
+  margin-bottom: 0;
+  color: white;
+  float: right;
+}
+
 /* From sib */
 /* <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css"> */
 /*
@@ -214,3 +253,69 @@ main {
   color: #c0ccda;
 }
 */
+
+.transcriptEntry {
+  margin-bottom: 2rem;
+}
+
+.transcriptSpeaker {
+  position: relative;
+  height: 2em;
+}
+.transcriptSpeakerAvatar {
+  width: 2em;
+  height: 2em;
+}
+.transcriptSpeakerName, .transcriptSpeakerNameShort {
+  font-weight: bold;
+}
+.transcriptSpeakerNameShort {
+  display: inline-block;
+  padding-left: 1em;
+  width: 4em;
+}
+.transcriptSpeakerName {
+  position: absolute;
+  top: 0;
+  left: 3rem;
+  padding-top: 0.5rem;
+}
+.transcriptText {
+  margin-left: 3rem;
+  padding-top: 0.5rem;
+}
+.transcriptText p {
+  margin-top: 0;
+}
+.code {
+  font-family: "Source Code Pro", Menlo, Ubuntu, mono;
+  background-color: rgba(175, 184, 193, 0.2)
+}
+.transcriptEntryShort {
+  display: flex;
+  margin-bottom: 1rem;
+}
+.avatarShort {
+  flex: 0 0 2em;
+}
+.bodyShort {
+  flex: 1 1 0;
+  margin-top: 0.5em;
+}
+
+.transcriptEntry.short {
+  display: flex;
+  margin-bottom: 1em;
+}
+.short .transcriptSpeaker {
+  flex: 0 0 7em;
+  display: flex;
+}
+.short .transcriptSpeakerName {
+  position:initial;
+  flex: 0 0 4em;
+  margin-left: 1em;
+}
+.short .transcriptText {
+  margin-left: 0rem;
+}

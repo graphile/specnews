@@ -5,4 +5,5 @@ export interface EpisodeDetails {
   embed: string;
   date: string;
   description?: JSX.Element;
+  transcript?: JSX.Element;
 }
