@@ -1,8 +1,7 @@
 import React, { FC, ReactElement, ReactNode } from "react";
 import { renderToString } from "react-dom/server";
+import "../styles/index.css";
 import { EpisodeDetails } from "../episodes";
-import { AnchorEmbed } from "./AnchorEmbed";
-import { Episode } from "./Episode";
 import { Hero } from "./Hero";
 import { Meta } from "./Meta";
 
