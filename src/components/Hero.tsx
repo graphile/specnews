@@ -13,7 +13,7 @@ export const Hero: FC<{ episode?: EpisodeDetails }> = ({ episode }) => {
             {episode ? (
               <>
                 <a className="close" href="/">
-                  X
+                  &times;
                 </a>
                 <h3>{episode.supertitle}</h3>
                 <h1>{episode.title}</h1>

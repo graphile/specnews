@@ -230,8 +230,7 @@ a.back {
 a.close {
   display: block;
   background-color: rgba(0, 0, 0, 0.3);
-  padding: 1rem;
-  border-radius: 1rem;
+  padding: 0.5rem;
   margin-left: -2rem;
   margin-top: 2rem;
   margin-bottom: 0;
