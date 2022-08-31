@@ -6,7 +6,7 @@ export const ep0005: EpisodeDetails = {
   id: "ep0005",
   supertitle: "SpecNews #5",
   title: "August 2022 WG",
-  embed: "https://anchor.fm/specnews/embed/episodes/4--July-2022-WG-e1l5vdr",
+  embed: "https://anchor.fm/specnews/embed/episodes/5--August-2022-WG-e1n7csa",
   date: "2022-08-31",
   description: (
     <div>
