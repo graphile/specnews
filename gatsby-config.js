@@ -1,6 +1,5 @@
-import type { GatsbyConfig } from "gatsby";
-
-const config: GatsbyConfig = {
+/** @type {import("gatsby").GatsbyConfig} */
+const config = {
   siteMetadata: {
     title: `SpecNews`,
     siteUrl: `https://SpecNewsPod.com`,
@@ -32,4 +31,4 @@ const config: GatsbyConfig = {
   ],
 };
 
-export default config;
+module.exports = config;
