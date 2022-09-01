@@ -48,7 +48,7 @@ export const ep0005: EpisodeDetails = {
       <J x>Musing over evolving the definition of GraphQL,</J>
       <B x>And more discussions around interfaces and unions,</B>
       <J x>Here we go!</J>
-      <Timestamp>[0:XX] Meeting times and cadence</Timestamp>
+      <Timestamp>[0:37] Meeting times and cadence</Timestamp>
       <B>
         The first discussion was meeting times and cadence. Working group
         meetings were originally three hours long, which was a bit of a slog,
@@ -76,7 +76,7 @@ export const ep0005: EpisodeDetails = {
           see us through for a while!
         </p>
       </B>
-      <Timestamp>[1:XX] GraphQL Over HTTP update</Timestamp>
+      <Timestamp>[1:37] GraphQL Over HTTP update</Timestamp>
       <J>
         <p>
           Next was Benjie with GraphQL over HTTP. The subgroup wants to advance
@@ -103,7 +103,7 @@ export const ep0005: EpisodeDetails = {
         more like <Code>application/graphql-response+json</Code>. There were no
         reservations to this and so the change will be made.
       </B>
-      <Timestamp>[X:XX] The STRUCT type</Timestamp>
+      <Timestamp>[2:44] The STRUCT type</Timestamp>
       <J>
         Then back to Benjie again for the STRUCT type. I&apos;ll let him explain
         this one.
@@ -127,7 +127,7 @@ export const ep0005: EpisodeDetails = {
         that it might solve many problems but in an inadequate way. He suggests
         going back a step and redefining the problem.
       </J>
-      <Timestamp>[X:XX] Redefining GraphQL</Timestamp>
+      <Timestamp>[3:50] Redefining GraphQL</Timestamp>
       <J>
         Next was Roman revisiting the topic of redefining GraphQL. He believes
         there are two separate definitions of GraphQL contained in the spec, and
@@ -140,7 +140,7 @@ export const ep0005: EpisodeDetails = {
         outwards-in where he asks for input from other members of the working
         group on what they feel the domain of the spec is.
       </J>
-      <Timestamp>[XX:XX] Unions and interfaces discussion</Timestamp>
+      <Timestamp>[4:27] Unions and interfaces discussion</Timestamp>
       <B>
         Yaacov returned with an update on extending the polymorphic types in
         GraphQL. This month he&apos;s proposing that unions could include other
@@ -153,7 +153,7 @@ export const ep0005: EpisodeDetails = {
         Lee closed this topic with a warning that without sufficient care this
         could lead to infinite recursion or recursion loops.
       </J>
-      <Timestamp>[xx:xx] Topics for next time</Timestamp>
+      <Timestamp>[4:57] Topics for next time</Timestamp>
       <B x>
         {" "}
         Two topics were bumped to the next meeting due to a lack of time&mdash;
@@ -183,11 +183,11 @@ export const ep0005: EpisodeDetails = {
         </a>
         .
       </J>
-      <B>
+      <B x>
         Yet another packed meeting! That's all from us at Spec News and we bid
         you a fond farewell.
       </B>
-      <J>Have a good one!</J>
+      <J x>Have a good one!</J>
     </Transcript>
   ),
 };
