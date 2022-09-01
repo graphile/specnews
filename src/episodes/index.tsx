@@ -3,6 +3,7 @@ import { ep0001 } from "./0001";
 import { ep0002 } from "./0002";
 import { ep0003 } from "./0003";
 import { ep0004 } from "./0004";
+import { ep0005 } from "./0005";
 
 export { EpisodeDetails } from "./interfaces";
-export default [ep0004, ep0003, ep0002, ep0001, ep0000];
+export default [ep0005, ep0004, ep0003, ep0002, ep0001, ep0000];
