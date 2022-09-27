@@ -6,12 +6,12 @@ html {
   font-family: "Roboto", -apple-system, BlinkMacSystemFont, Tahoma, sans‑serif;
 }
 body {
-  background-color: #e1009814;
+  background-color: #f9f3ee;
   padding-bottom: 2rem;
 }
 .header {
-  background-color: #e10098;
-  color: white;
+  background-color: #f9ceee;
+  color: black;
   display: flex;
   justify-content: center;
   padding: 4rem;
@@ -129,8 +129,9 @@ p.lead {
 }
 .subscribe button {
   flex: 0;
-  background-color: #9ae100;
+  background-color: #4F76BA;
   font-weight: bold;
+  color: white;
 }
 
 .channels {
@@ -217,6 +218,10 @@ main {
   display: none;
 }
 
+a {
+  color:#e10098;
+}
+
 a.back {
   display: inline-block;
   background-color: rgba(0, 0, 0, 0.3);
@@ -289,7 +294,8 @@ a.close {
 }
 .code {
   font-family: "Source Code Pro", Menlo, Ubuntu, mono;
-  background-color: rgba(175, 184, 193, 0.2)
+  background-color: #bde0fe;
+  color: #2B446E;
 }
 .transcriptEntryShort {
   display: flex;
