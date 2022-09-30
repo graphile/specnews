@@ -238,7 +238,9 @@ export const ep0006: EpisodeDetails = {
           href="https://youtu.be/MEi1u6L__Ck?t=7148"
           rel="ugc noopener noreferrer"
           target="_blank"
-        ></a>
+        >
+          https://youtu.be/MEi1u6L__Ck?t=7148
+        </a>
         )
       </B>
       <J>
